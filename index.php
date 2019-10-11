@@ -7,7 +7,7 @@
 
     $a= new pessoa(2.00,70,55);
 
-    echo $pessoa;
+    echo $a;
     
     
     
