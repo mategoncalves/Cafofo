@@ -1,6 +1,6 @@
 <?php
 
-  class Pessoa{
+  class Pessoa implements JsonSerializable{
     private $altura;
     private $idade;
     private $peso;
@@ -22,6 +22,14 @@
     public function __toString(){
       $str = "Peso: ".$this->peso."<br>Altura: ".$this->altura."<br>Idade: ".$this->idade;
       return $str;
+    }
+    public function jsonSerialize(){
+    return 
+      [
+        "a Idade: " => $this->idade,
+        "o Peso: " => $this->peso,
+        "a Altura: "=> $this->altura      
+      ];
     }
   }
 
