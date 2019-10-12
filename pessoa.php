@@ -1,6 +1,6 @@
 <?php
-
-  class Pessoa implements JsonSerializable{
+  include 'conexao.php';
+  class Pessoa extends Conexao implements JsonSerializable{
     private $altura;
     private $idade;
     private $peso;
@@ -31,6 +31,14 @@
         "a Altura: "=> $this->altura      
       ];
     }
+
+    public function findAll(){
+      $sql = "SELECT * FROM : conteudo";
+      $consulta = Conexao::prepare($sql);
+      $consulta->execute();
+      return $consulta->fetchAll();
+    }
+
   }
 
 ?>
