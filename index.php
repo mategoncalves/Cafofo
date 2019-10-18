@@ -3,18 +3,20 @@
     <title>PHP Test</title>
   </head>
   <body>
-    <?php echo '<p>Hello World</p>'; 
-    $numero =1;
-    echo $numero;
-    echo '<p>oi</p>';
-    define("ip","127.0.0.1");
-    echo ip;
-    $num1 =1;$num2 = 2;
-    echo("<br>A soma é ".($num1+$num2));
-    
-    
-    
-    
+    <?php 
+    //include 'Cafofo/pessoa.php';
+    include 'Cafofo/filho.php';
+    $a= new pessoa(2.00,70,55);
+    $b = new filho(2.00,70,55);
+
+    echo json_encode($a, JSON_PRETTY_PRINT);;
+
+    $b->setTimeDoCoracao("Cruzeiro");
+
+    echo $b;
+
+
+
     
     
     ?> 
