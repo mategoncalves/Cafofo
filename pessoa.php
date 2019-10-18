@@ -1,6 +1,10 @@
 <?php
+<<<<<<< HEAD
   include __DIR__.'conexao.php';
 
+=======
+  include 'conexao.php';
+>>>>>>> 19f2aa1bd96390e512cd38dc3a7caf4db2d39b25
   class Pessoa extends Conexao implements JsonSerializable{
     private $altura;
     private $idade;
